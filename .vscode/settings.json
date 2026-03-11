@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./RAG_CHATBOT/backend/src"
+    ],
+    "python.defaultInterpreterPath": "./.venv/Scripts/python.exe"
+}

@@ -1,0 +1,52 @@
+name = "todo-ai-chatbot"
+version = "1.0"
+
+[project]
+name = "Todo AI Chatbot"
+description = "Natural-language AI chatbot that manages todos via conversation using MCP tools"
+phase = "III"
+
+[technology_stack]
+frontend = "OpenAI ChatKit"
+backend = "FastAPI (Python)"
+ai_agent = "OpenAI Agents SDK"
+mcp_tools = "Official MCP SDK (Python)"
+orm = "SQLModel"
+database = "Neon Serverless PostgreSQL"
+authentication = "Better Auth + JWT"
+llm = ["gpt-4o-mini", "claude-3.5-sonnet"]
+
+[architecture]
+type = "Stateless FastAPI server"
+endpoint = "POST /api/{user_id}/chat"
+state_management = "Conversation state stored in DB"
+user_isolation = "Strict user isolation via JWT in every tool call"
+
+[database_models]
+Task = "reused from Phase II"
+Conversation = "user_id, id, created_at, updated_at"
+Message = "user_id, conversation_id, role (user/agent), content, created_at"
+
+[development_approach]
+methodology = "Agentic Dev Stack workflow"
+workflow = ["spec", "plan", "tasks", "Claude Code implementation"]
+restriction = "No manual coding allowed"
+
+[core_features]
+natural_language_interface = true
+mcp_integration = true
+user_isolation = true
+conversation_history = true
+jwt_authentication = true
+
+[api_endpoints]
+chat = { method = "POST", path = "/api/{user_id}/chat", description = "Main chat endpoint" }
+
+[api_endpoints.chat.request_schema]
+conversation_id = { type = "integer", optional = true }
+message = { type = "string", required = true }
+
+[security]
+authentication_required = true
+jwt_validation = true
+user_data_isolation = true
