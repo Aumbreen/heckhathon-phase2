@@ -1,0 +1,207 @@
+# ===========================================
+# Master .gitignore for Phase 3 Hackathon 2
+# Todo AI Chatbot with MCP & Gemini
+# ===========================================
+
+# ===========================================
+# Global Ignores
+# ===========================================
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+*.cache
+
+# ===========================================
+# Backend (Python) Ignores
+# ===========================================
+
+RAG_CHATBOT/backend/__pycache__/
+RAG_CHATBOT/backend/*.py[cod]
+RAG_CHATBOT/backend/*$py.class
+RAG_CHATBOT/backend/*.so
+RAG_CHATBOT/backend/.Python
+RAG_CHATBOT/backend/build/
+RAG_CHATBOT/backend/develop-eggs/
+RAG_CHATBOT/backend/dist/
+RAG_CHATBOT/backend/downloads/
+RAG_CHATBOT/backend/eggs/
+RAG_CHATBOT/backend/.eggs/
+RAG_CHATBOT/backend/lib/
+RAG_CHATBOT/backend/lib64/
+RAG_CHATBOT/backend/parts/
+RAG_CHATBOT/backend/sdist/
+RAG_CHATBOT/backend/var/
+RAG_CHATBOT/backend/wheels/
+RAG_CHATBOT/backend/*.egg-info/
+RAG_CHATBOT/backend/.installed.cfg
+RAG_CHATBOT/backend/*.egg
+
+# Virtual Environment
+RAG_CHATBOT/backend/.venv/
+RAG_CHATBOT/backend/venv/
+RAG_CHATBOT/backend/ENV/
+RAG_CHATBOT/backend/env/
+
+# Environment Variables (IMPORTANT!)
+RAG_CHATBOT/backend/.env
+RAG_CHATBOT/backend/.env.local
+
+# Database
+RAG_CHATBOT/backend/*.db
+RAG_CHATBOT/backend/*.sqlite
+RAG_CHATBOT/backend/*.sqlite3
+RAG_CHATBOT/backend/todo_chatbot.db
+
+# Testing
+RAG_CHATBOT/backend/.pytest_cache/
+RAG_CHATBOT/backend/.coverage
+RAG_CHATBOT/backend/htmlcov/
+RAG_CHATBOT/backend/.tox/
+RAG_CHATBOT/backend/.mypy_cache/
+
+# ===========================================
+# Frontend (Node.js/Next.js) Ignores
+# ===========================================
+
+# Node modules
+RAG_CHATBOT/frontend/node_modules/
+RAG_CHATBOT/frontend/npm-debug.log*
+
+# Next.js
+RAG_CHATBOT/frontend/.next/
+RAG_CHATBOT/frontend/out/
+RAG_CHATBOT/frontend/build/
+
+# Environment Variables (IMPORTANT!)
+RAG_CHATBOT/frontend/.env.local
+RAG_CHATBOT/frontend/.env.development.local
+RAG_CHATBOT/frontend/.env.test.local
+RAG_CHATBOT/frontend/.env.production.local
+
+# Vercel
+RAG_CHATBOT/frontend/.vercel/
+
+# TypeScript
+RAG_CHATBOT/frontend/*.tsbuildinfo
+RAG_CHATBOT/frontend/next-env.d.ts
+
+# Testing
+RAG_CHATBOT/frontend/coverage/
+RAG_CHATBOT/frontend/.nyc_output/
+
+# Misc
+RAG_CHATBOT/frontend/.eslintcache
+
+# ===========================================
+# Qwen / Claude / AI Config (Keep templates)
+# ===========================================
+
+# Keep template files
+!RAG_CHATBOT/backend/.env.example
+!RAG_CHATBOT/frontend/.env.example
+
+# Ignore actual env files
+RAG_CHATBOT/.qwen/settings.local.json
+RAG_CHATBOT/.claude/settings.local.json
+
+# ===========================================
+# Git
+# ===========================================
+
+# Git files (keep .gitignore itself)
+.git/
+.gitattributes
+.gitmodules
+
+# ===========================================
+# Documentation (Keep all docs)
+# ===========================================
+
+# Keep all markdown files
+*.md
+
+# Keep all prompt files
+*.prompt.md
+
+# ===========================================
+# Skills (Keep skills directory)
+# ===========================================
+
+# Keep skills.md and skill files
+RAG_CHATBOT/skills.md
+RAG_CHATBOT/skills/
+
+# ===========================================
+# GitHub Actions (Keep workflows)
+# ===========================================
+
+# Keep workflow files
+.github/workflows/*.yml
+
+# ===========================================
+# Deployment (Keep config files)
+# ===========================================
+
+# Keep deployment configs
+RAG_CHATBOT/frontend/vercel.json
+RAG_CHATBOT/backend/start-windows.bat
+
+# ===========================================
+# Secrets & Credentials (NEVER commit these)
+# ===========================================
+
+# API Keys
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# AWS
+.aws/credentials
+.aws/config
+
+# Google Cloud
+*-service-account.json
+gcloud-service-key.json
+
+# Azure
+azuredeploy.parameters.json
+
+# ===========================================
+# Build Artifacts
+# ===========================================
+
+RAG_CHATBOT/backend-deployment.zip
+*.jar
+*.war
+*.ear
+
+# ===========================================
+# End of .gitignore
+# ===========================================
